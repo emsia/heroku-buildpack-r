@@ -26,6 +26,7 @@ R_HOME="$VENDOR_DIR/R"
 CRAN_MIRROR="http://cran.revolutionanalytics.com"
 
 mkdir -p $CACHE_DIR
+mkdir -p $VENDOR_DIR
 
 # vendor R into the slug
 echo "Vendoring R $R_VERSION" | indent
