@@ -49,8 +49,8 @@ echo LDFLAGS:  $LDFLAGS
 # configure and make R
 cd $basedir/R-$rversion/
 
-# ./configure --prefix=$prefix --without-x && make && make install
-./configure --prefix=$prefix --without-x --enable-R-shlib && make && make install
+# Shiny apparently requires X, so we can't --without-x as we might like.
+./configure --prefix=$prefix --enable-R-shlib && make && make install
 
 # remove unneeded files to make the output smaller
 cd $vendordir
